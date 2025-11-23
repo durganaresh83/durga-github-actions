@@ -16,6 +16,17 @@ jobs:
 
   install-and-test:
     runs-on: ubuntu-latest
+    
+    services:
+       mongodb:
+         image: mongo:6.0
+         options: >-
+           --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'"
+           --health-interval 10s
+           --health-timeout 5s
+           --health-retries 5
+         ports:
+           - 27017:27017
 
     steps:
       - name: Checkout Code
