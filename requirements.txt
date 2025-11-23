@@ -1,4 +1,3 @@
-Flask 
+Flask
 Flask-PyMongo 
-python-dotenv 
-bson
+python-dotenv
