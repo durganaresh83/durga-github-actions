@@ -33,6 +33,9 @@ jobs:
         run: |
           pip install pytest
           pytest
+        env:
+          MONGO_URI: mongodb://localhost:27017/test_db
+          SECRET_KEY: test_secret_key
 
   build:
     needs: install-and-test
