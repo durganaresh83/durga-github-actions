@@ -124,5 +124,60 @@ The workflow performs the following steps automatically: <br>
 - "**staging**" branch: This branch is used for deploying the application to the staging environment for testing before production release. <br>
 - "**main**" branch or GitHub Releases: When a release tag is created (e.g., `v1.0.0`), the application is deployed to the production environment. <br>
 
+<img width="1686" height="602" alt="image" src="https://github.com/user-attachments/assets/3c51e179-6a64-4eb9-b3f0-247e45629e74" />
+
+# Install Dependencies:
+Installed the required dependencies.
+
+<img width="1391" height="843" alt="image" src="https://github.com/user-attachments/assets/fd5cdcf4-2cde-4ae2-b5a0-923db0f1b70f" />
+
+# Run Tests:
+All the tests are executed. <br>
+
+<img width="1373" height="761" alt="image" src="https://github.com/user-attachments/assets/1d52ea02-9ca8-4222-810d-cd8d501aba2a" />
+
+# Build Stage:
+Build the application with Python code.
+
+<img width="1415" height="823" alt="image" src="https://github.com/user-attachments/assets/19bd5724-2fcb-44d1-a529-e1ebe52cb851" />
+
+# Deploy to Staging" triggered
+
+<img width="762" height="817" alt="image" src="https://github.com/user-attachments/assets/d6fb6c0d-a271-4c66-99f4-4badbdf3eb5f" />
+
+# How to test manually (locally running Flask app)
+Start the Flask app (PowerShell) <br>
+
+$env:MONGO_URI = "mongodb://localhost:27017/test_student_db" <br>
+$env:SECRET_KEY = "test_secret_key" <br>
+python app.py <br>
+
+<img width="1408" height="522" alt="image" src="https://github.com/user-attachments/assets/cb5cc4b5-e361-43b3-bf0e-5178e55121eb" />
+
+# Open a browser to http://127.0.0.1:5000 and use the "Add Student" form.
+
+<img width="1675" height="558" alt="Screenshot 2025-11-23 152131" src="https://github.com/user-attachments/assets/43978630-9f57-480a-bdd2-25a85858a2ef" />
+
+**Add Student**:
+
+<img width="1546" height="708" alt="Screenshot 2025-11-23 152145" src="https://github.com/user-attachments/assets/eb8b2e01-1168-47da-8531-0f424e69c5ca" />
+
+Once student details are added <br>
+
+<img width="1687" height="428" alt="Screenshot 2025-11-23 152219" src="https://github.com/user-attachments/assets/7eeba325-2943-4a9d-9a07-105f107f8fcb" />
+
+
+After adding the student details, update the course details:
+
+<img width="1262" height="658" alt="image" src="https://github.com/user-attachments/assets/b66c925f-786d-458e-8f69-743f0ecaacf3" />
+
+Updated the student details
+
+<img width="1612" height="356" alt="image" src="https://github.com/user-attachments/assets/49453ca2-6f60-4ef6-925e-c883186cd0e9" />
+
+
+
+
+
 
 
