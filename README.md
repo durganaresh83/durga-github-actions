@@ -97,11 +97,32 @@ jobs:
 
 # Add Environment Secrets
 
-# Go to your repo:
+# Go to your repo: The workflow requires sensitive deployment credentials stored securely as GitHub Secrets.
 
-Settings → Secrets and variables → Actions → New repository secret <br>
+Click on Settings → Secrets and variables → Actions → New repository secret <br>
 
-Secret Name: <br>
+Add the following secrets: <br>
 STAGING_API_KEY	Used for staging deployment <br>
 PRODUCTION_API_KEY	Used for production deployment <br>
+
+These secrets are used in the workflow to authenticate deployment securely without exposing sensitive information in the code. <br>
+
+# GitHub Actions CI/CD Workflow
+
+This repository includes a GitHub Actions workflow to automate the Continuous Integration and Continuous Deployment (CI/CD) of the Flask application. <br>
+
+The workflow performs the following steps automatically: <br>
+
+- Installs the necessary Python dependencies. <br>
+- Runs the test suite using pytest to ensure code quality. <br>
+- Builds/prepares the application if tests pass. <br>
+- Deploys the application to the **staging** environment on push to the `staging` branch. <br>
+- Deploys the application to the **production** environment when a release is tagged. <br>
+
+# Branch Usage:
+
+- "**staging**" branch: This branch is used for deploying the application to the staging environment for testing before production release. <br>
+- "**main**" branch or GitHub Releases: When a release tag is created (e.g., `v1.0.0`), the application is deployed to the production environment. <br>
+
+
 
